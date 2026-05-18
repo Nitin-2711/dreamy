@@ -61,7 +61,7 @@ const MobileStickyCTA = () => {
               <a
                 href="#booking"
                 onClick={handleBookClick}
-                className="px-5 py-3 rounded-xl bg-warm-beige text-theme-bg font-semibold uppercase tracking-widest text-[10px] flex items-center gap-2 hover:shadow-[0_0_15px_rgba(214,194,168,0.3)] transition-all animate-pulse"
+                className="px-5 py-3 rounded-xl bg-warm-beige text-[#111111] font-semibold uppercase tracking-widest text-[10px] flex items-center gap-2 hover:shadow-[0_0_15px_rgba(214,194,168,0.3)] transition-all animate-pulse"
               >
                 <Calendar size={14} />
                 Reserve

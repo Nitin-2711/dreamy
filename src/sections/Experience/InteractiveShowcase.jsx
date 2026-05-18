@@ -89,9 +89,9 @@ const InteractiveShowcase = () => {
                 
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 w-full p-8 z-20 translate-y-4 group-hover:translate-y-0 opacity-80 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="font-heading text-2xl text-soft-white mb-2">{item.title}</h3>
+                  <h3 className="font-heading text-2xl text-white mb-2">{item.title}</h3>
                   <div className="h-[1px] w-0 group-hover:w-full bg-warm-beige transition-all duration-700 ease-out mb-4"></div>
-                  <p className="text-soft-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {item.desc}
                   </p>
                 </div>

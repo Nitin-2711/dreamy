@@ -29,7 +29,7 @@ const ContactSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a href="#booking" className="group relative w-full sm:w-auto px-8 py-4 bg-warm-beige text-theme-bg overflow-hidden rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(214,194,168,0.4)] flex items-center justify-center gap-3">
+          <a href="#booking" className="group relative w-full sm:w-auto px-8 py-4 bg-warm-beige text-[#111111] overflow-hidden rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_30px_rgba(214,194,168,0.4)] flex items-center justify-center gap-3">
             <Calendar size={18} />
             <span className="uppercase tracking-widest text-xs font-semibold">Book Now</span>
           </a>

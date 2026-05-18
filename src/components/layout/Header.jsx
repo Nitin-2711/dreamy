@@ -56,7 +56,9 @@ const Header = () => {
             onClick={(e) => handleScrollTo(e, '#hero')}
             className="flex flex-col select-none group"
           >
-            <span className="font-heading text-lg md:text-xl tracking-[0.25em] text-theme-text font-medium group-hover:text-glow transition-all duration-300">
+            <span className={`font-heading text-lg md:text-xl tracking-[0.25em] font-medium group-hover:text-glow transition-all duration-300 ${
+              isScrolled ? 'text-theme-text' : 'text-white'
+            }`}>
               DREAMY STUDIO
             </span>
             <span className="text-[9px] font-mono tracking-[0.35em] text-warm-beige uppercase">
@@ -71,7 +73,11 @@ const Header = () => {
                 key={idx}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="text-xs uppercase tracking-widest text-theme-text-secondary hover:text-warm-beige transition-colors duration-300 font-semibold relative py-1 group"
+                className={`text-xs uppercase tracking-widest transition-colors duration-300 font-semibold relative py-1 group ${
+                  isScrolled 
+                    ? 'text-theme-text-secondary hover:text-warm-beige' 
+                    : 'text-white/80 hover:text-warm-beige'
+                }`}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-warm-beige transition-all duration-300 group-hover:w-full"></span>
@@ -84,7 +90,9 @@ const Header = () => {
             {/* Elegant Theme Switcher */}
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center text-theme-text hover:border-warm-beige/50 hover:bg-warm-beige/5 transition-all duration-300 cursor-pointer"
+              className={`w-10 h-10 rounded-full border flex items-center justify-center hover:border-warm-beige/50 hover:bg-warm-beige/5 transition-all duration-300 cursor-pointer ${
+                isScrolled ? 'border-glass-border text-theme-text' : 'border-white/20 text-white'
+              }`}
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? (
@@ -97,7 +105,11 @@ const Header = () => {
             <a
               href="#booking"
               onClick={(e) => handleScrollTo(e, '#booking')}
-              className="px-6 py-2.5 rounded-full border border-warm-beige/30 bg-warm-beige/5 text-theme-text hover:bg-warm-beige hover:text-theme-bg hover:shadow-[0_0_20px_rgba(214,194,168,0.25)] transition-all duration-500 flex items-center gap-2 group cursor-pointer"
+              className={`px-6 py-2.5 rounded-full border transition-all duration-500 flex items-center gap-2 group cursor-pointer ${
+                isScrolled 
+                  ? 'border-warm-beige/30 bg-warm-beige/5 text-theme-text hover:bg-warm-beige hover:text-theme-bg hover:shadow-[0_0_20px_rgba(214,194,168,0.25)]' 
+                  : 'border-white/30 bg-white/5 text-white hover:bg-warm-beige hover:text-theme-bg hover:shadow-[0_0_20px_rgba(214,194,168,0.25)]'
+              }`}
             >
               <Calendar size={14} className="group-hover:scale-110 transition-transform" />
               <span className="uppercase tracking-widest text-[10px] font-bold">Book Retreat</span>
@@ -108,7 +120,9 @@ const Header = () => {
           <div className="flex md:hidden items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="w-9 h-9 rounded-full border border-glass-border flex items-center justify-center text-theme-text"
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                isScrolled ? 'border-glass-border text-theme-text' : 'border-white/20 text-white'
+              }`}
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? '☀️' : '🌙'}
@@ -116,7 +130,9 @@ const Header = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-9 h-9 rounded-full border border-glass-border flex items-center justify-center text-theme-text hover:border-warm-beige/50"
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                isScrolled ? 'border-glass-border text-theme-text' : 'border-white/20 text-white'
+              }`}
               aria-label="Toggle Menu"
             >
               {isOpen ? <X size={18} /> : <Menu size={18} />}
@@ -164,7 +180,7 @@ const Header = () => {
               <a
                 href="#booking"
                 onClick={(e) => handleScrollTo(e, '#booking')}
-                className="w-full py-4 rounded-xl bg-warm-beige text-theme-bg font-semibold text-center uppercase tracking-widest text-xs shadow-lg hover:shadow-warm-beige/30 transition-all flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl bg-warm-beige text-[#111111] font-semibold text-center uppercase tracking-widest text-xs shadow-lg hover:shadow-warm-beige/30 transition-all flex items-center justify-center gap-2"
               >
                 <Calendar size={16} />
                 Book Cozy Retreat

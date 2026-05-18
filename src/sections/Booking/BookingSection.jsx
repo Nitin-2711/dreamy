@@ -449,13 +449,13 @@ Please confirm availability. Thank you!`;
                       disabled={!checkInDate || !checkOutDate || isSubmitting}
                       className={`w-full py-4 rounded-xl font-medium tracking-widest text-xs uppercase flex items-center justify-center gap-3 transition-all duration-300 relative overflow-hidden ${
                         checkInDate && checkOutDate 
-                          ? 'bg-warm-beige text-theme-bg hover:shadow-[0_0_30px_rgba(214,194,168,0.3)] cursor-pointer' 
+                          ? 'bg-warm-beige text-[#111111] hover:shadow-[0_0_30px_rgba(214,194,168,0.3)] cursor-pointer' 
                           : 'bg-glass-white border border-glass-border text-theme-text/40 cursor-not-allowed'
                       }`}
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="w-5 h-5 border-2 border-theme-bg border-t-transparent rounded-full animate-spin"></div>
+                          <div className="w-5 h-5 border-2 border-[#111111] border-t-transparent rounded-full animate-spin"></div>
                           <span>Confirming Experience...</span>
                         </>
                       ) : (
@@ -545,7 +545,7 @@ Please confirm availability. Thank you!`;
                                   inRange ? 'bg-warm-beige/20 text-warm-beige font-bold' : ''
                                 } ${
                                   selected 
-                                    ? 'bg-warm-beige text-theme-bg font-bold shadow-[0_0_20px_rgba(214,194,168,0.65)] scale-105 z-10' 
+                                    ? 'bg-warm-beige text-[#111111] font-bold shadow-[0_0_20px_rgba(214,194,168,0.65)] scale-105 z-10' 
                                     : ''
                                 }`}
                               >
@@ -553,10 +553,10 @@ Please confirm availability. Thank you!`;
                                 
                                 {/* Micro Indicators */}
                                 {isCheckIn && (
-                                  <span className="absolute bottom-[2px] w-1.5 h-1.5 bg-theme-bg rounded-full"></span>
+                                  <span className="absolute bottom-[2px] w-1.5 h-1.5 bg-[#111111] rounded-full"></span>
                                 )}
                                 {isCheckOut && (
-                                  <span className="absolute bottom-[2px] w-1.5 h-1.5 bg-theme-bg rounded-full"></span>
+                                  <span className="absolute bottom-[2px] w-1.5 h-1.5 bg-[#111111] rounded-full"></span>
                                 )}
                               </button>
                             );
@@ -624,7 +624,7 @@ Please confirm availability. Thank you!`;
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
                       onClick={handleWhatsAppRedirect}
-                      className="px-8 py-4 bg-warm-beige text-theme-bg font-medium tracking-widest text-xs uppercase rounded-xl hover:shadow-[0_0_30px_rgba(214,194,168,0.4)] transition-all duration-300"
+                      className="px-8 py-4 bg-warm-beige text-[#111111] font-medium tracking-widest text-xs uppercase rounded-xl hover:shadow-[0_0_30px_rgba(214,194,168,0.4)] transition-all duration-300"
                     >
                       Instant WhatsApp Checkout
                     </button>

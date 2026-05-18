@@ -126,7 +126,7 @@ const GallerySection = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative px-6 py-3 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-500 cursor-pointer ${
                   activeTab === tab.id 
-                    ? 'text-theme-bg' 
+                    ? 'text-[#111111]' 
                     : 'text-theme-text/75 hover:text-theme-text'
                 }`}
               >
@@ -161,10 +161,10 @@ const GallerySection = () => {
                 onClick={() => setSelectedImg(img)}
               >
                 {/* Overlay with details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-theme-bg via-theme-bg/30 to-transparent opacity-0 group-hover:opacity-90 transition-all duration-500 z-20 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-95 transition-all duration-500 z-20 flex flex-col justify-end p-6">
                   <span className="text-[9px] uppercase tracking-widest text-warm-beige font-mono mb-1">{img.tag}</span>
                   <h3 className="font-heading text-xl text-white mb-2">{img.title}</h3>
-                  <p className="text-[11px] text-white/70 leading-relaxed font-normal opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <p className="text-[11px] text-white/80 leading-relaxed font-normal opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {img.desc}
                   </p>
                 </div>

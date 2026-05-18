@@ -15,22 +15,22 @@
 
 @layer base {
   :root {
-    --bg-color: #FAF6F0; /* Warm Alabaster/Cream - ultra-expensive luxury hotel vibe */
-    --text-primary: #1A1510; /* Rich Dark Sepia/Charcoal */
-    --text-secondary: #5C544A; /* Warm Muted Charcoal */
-    --text-accent: #B89C7E; /* Soft Champagne Gold */
-    --glass-bg: rgba(255, 255, 255, 0.45);
-    --glass-border: rgba(184, 156, 126, 0.15); /* Gold-tinted border */
+    --bg-color: #FAF6F0; /* Soft warm white background */
+    --text-primary: #111111; /* Rich charcoal black text */
+    --text-secondary: #555555; /* Highly readable charcoal secondary */
+    --text-accent: #B89C7E; /* Elegant beige/gold accents */
+    --glass-bg: rgba(255, 255, 255, 0.65); /* Premium glassmorphism backdrop with superior readability contrast */
+    --glass-border: rgba(184, 156, 126, 0.22); /* Gold-tinted border */
     --text-glow-shadow: 0 1px 2px rgba(184, 156, 126, 0.1);
   }
   
   .dark {
-    --bg-color: #0A0A0A; /* Deep Obsidian Black */
-    --text-primary: #FAF6F0; /* Soft Warm Cream */
-    --text-secondary: #D6C2A8; /* Warm Beige / Champagne */
-    --text-accent: #E8D4BA; /* Sparkling Gold */
-    --glass-bg: rgba(10, 10, 10, 0.55);
-    --glass-border: rgba(214, 194, 168, 0.12);
+    --bg-color: #0A0A0A; /* Matte black luxury background */
+    --text-primary: #F5F5F5; /* Soft white primary text */
+    --text-secondary: #D6C2A8; /* Warm beige highlights */
+    --text-accent: #E8D4BA; /* Sparkling gold accents */
+    --glass-bg: rgba(10, 10, 10, 0.72); /* Perfect deep glass opacity */
+    --glass-border: rgba(214, 194, 168, 0.16);
     --text-glow-shadow: 0 0 25px rgba(214, 194, 168, 0.25);
   }
 

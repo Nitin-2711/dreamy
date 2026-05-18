@@ -37,7 +37,7 @@ const HeroSection = () => {
           <p className="text-warm-beige text-sm md:text-base tracking-[0.3em] uppercase mb-6 font-medium">
             A Luxury Escape Inside Galaxy Blue Sapphire
           </p>
-          <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl text-theme-text max-w-5xl mx-auto leading-[1.1] mb-8 text-glow select-none">
+          <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl text-white max-w-5xl mx-auto leading-[1.1] mb-8 text-glow select-none">
             Dreamy <br className="md:hidden" />
             <span className="italic text-warm-beige font-light">Studio</span>
           </h1>
