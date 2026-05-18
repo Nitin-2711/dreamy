@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
+import LazyImage from '../../components/ui/LazyImage';
 
 const InteractiveShowcase = () => {
   const { theme } = useTheme();
@@ -69,10 +70,11 @@ const InteractiveShowcase = () => {
             >
               <div className="overflow-hidden rounded-2xl aspect-[3/4] relative glass">
                 <motion.div className="absolute inset-0 bg-theme-bg/40 group-hover:bg-transparent transition-colors duration-700 z-10" />
-                <img
+                <LazyImage
                   src={item.src}
                   alt={item.title}
-                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
+                  className="w-full h-full"
+                  imageClassName="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 
                 {/* Content Overlay */}

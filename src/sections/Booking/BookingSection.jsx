@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar as CalendarIcon, Clock, Users, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import LazyImage from '../../components/ui/LazyImage';
 
 const BookingSection = () => {
   const { theme } = useTheme();
@@ -251,10 +252,11 @@ Please confirm availability. Thank you!`;
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative rounded-2xl overflow-hidden aspect-video group"
             >
-              <img 
+              <LazyImage 
                 src={checkInDate ? (theme === 'dark' ? "/suite.png" : "/suite_day.png") : (theme === 'dark' ? "/hero.png" : "/hero_day.png")} 
                 alt="Selected ambiance" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                className="w-full h-full"
+                imageClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-theme-bg via-transparent to-transparent opacity-80"></div>
               <div className="absolute bottom-6 left-6 right-6">

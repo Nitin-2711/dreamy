@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import LazyImage from '../../components/ui/LazyImage';
 
 const ExperienceSection = () => {
   const experiences = [
@@ -47,10 +47,11 @@ const ExperienceSection = () => {
               >
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-card p-2">
                   <div className="w-full h-full rounded-xl overflow-hidden relative">
-                    <img 
+                    <LazyImage 
                       src={exp.img} 
                       alt={exp.title} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                      className="w-full h-full"
+                      imageClassName="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-theme-bg/80 to-transparent"></div>
                   </div>

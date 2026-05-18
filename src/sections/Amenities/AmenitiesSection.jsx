@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Wifi, Tv, Monitor, Wind, Coffee, Lightbulb, Building, Moon, Sunset } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import LazyImage from '../../components/ui/LazyImage';
 
 const AmenitiesSection = () => {
   const { theme } = useTheme();
@@ -119,10 +120,11 @@ const AmenitiesSection = () => {
           
           {/* Visual Showcase - Column 7 */}
           <div className="lg:col-span-7 aspect-video lg:aspect-auto relative overflow-hidden min-h-[350px]">
-            <img 
+            <LazyImage 
               src={theme === 'dark' ? "/city_view.png" : "/hero_day.png"} 
               alt="Cinematic Balcony view" 
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+              className="w-full h-full"
+              imageClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
             />
             {/* Ambient overlay and reflections */}
             <div className="absolute inset-0 bg-gradient-to-r from-theme-bg via-transparent to-transparent opacity-90 lg:opacity-75"></div>

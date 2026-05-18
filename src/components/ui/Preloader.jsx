@@ -5,20 +5,49 @@ const Preloader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const duration = 3500; // 3.5 seconds target duration
+    const start = Date.now();
+
     const timer = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const progressPercent = (elapsed / duration) * 100;
+
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
           setTimeout(() => {
             onComplete();
-          }, 600);
+          }, 700); // Premium exit timeout
           return 100;
         }
-        // Increment progress faster at start and slower at end for custom realistic load feel
-        const diff = Math.random() * 15;
-        return Math.min(prev + diff, 100);
+
+        // Luxury non-linear loading curve:
+        // - 0% to 35%: Fast, snappy initial bootstrap
+        // - 35% to 75%: Slower pacing to let the elegant quotes fade in
+        // - 75% to 92%: Simulation of high-fidelity luxury asset calibration (holds/slower)
+        // - 92% to 100%: Smooth final resolution sweep
+        let targetProgress = progressPercent;
+
+        if (progressPercent < 35) {
+          targetProgress = progressPercent * 1.3;
+        } else if (progressPercent >= 35 && progressPercent < 75) {
+          targetProgress = 45.5 + (progressPercent - 35) * 0.75;
+        } else if (progressPercent >= 75 && progressPercent < 92) {
+          targetProgress = 75.5 + (progressPercent - 75) * 0.35;
+        } else {
+          targetProgress = 81.45 + (progressPercent - 92) * 2.32;
+        }
+
+        // Add micro-jitter to make progress feel organically active
+        const jitter = (Math.random() - 0.5) * 1.5;
+        const nextVal = Math.min(Math.max(prev + Math.random() * 1.2, targetProgress + jitter), 99.6);
+
+        if (elapsed >= duration) {
+          return 100;
+        }
+        return nextVal;
       });
-    }, 80);
+    }, 45); // Faster ticking for ultra-smooth percentage counter rendering
 
     return () => clearInterval(timer);
   }, [onComplete]);
