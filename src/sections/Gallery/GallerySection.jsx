@@ -4,13 +4,13 @@ import LazyImage from '../../components/ui/LazyImage';
 
 const GallerySection = () => {
   const images = [
-    "/hero.png",
-    "/architectural.png",
-    "/lounge.png",
-    "/city_view.png",
-    "/suite.png",
-    "/interior.png",
-    "/workspace.png",
+    "/hero.webp",
+    "/architectural.webp",
+    "/lounge.webp",
+    "/city_view.webp",
+    "/suite.webp",
+    "/interior.webp",
+    "/workspace.webp",
   ];
 
   const [selectedImg, setSelectedImg] = useState(null);
