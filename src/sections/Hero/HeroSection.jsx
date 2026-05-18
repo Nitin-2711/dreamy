@@ -15,8 +15,8 @@ const HeroSection = () => {
         transition={{ duration: 2.5, ease: 'easeOut' }}
       >
         <img
-          src={theme === 'dark' ? "/hero.webp" : "/hero_day.webp"}
-          alt="Luxury Studio Interior"
+          src={theme === 'dark' ? "/plaza_hero_dusk.webp" : "/plaza_facade.webp"}
+          alt="Galaxy Blue Sapphire Plaza Exterior"
           className="w-full h-full object-cover"
         />
         {/* Cinematic Vignette */}

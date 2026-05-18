@@ -17,6 +17,11 @@ const ExperienceSection = () => {
       title: "Calm Productivity",
       desc: "A dedicated minimalist workspace designed to spark your best ideas.",
       img: "/workspace.webp"
+    },
+    {
+      title: "Urban Pulse",
+      desc: "Step down directly into a thriving premium hub of shopping, dining, and world-class entertainment.",
+      img: "/plaza_night.webp"
     }
   ];
 

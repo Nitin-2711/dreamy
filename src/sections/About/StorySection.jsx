@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../../context/ThemeContext';
 
 const StorySection = () => {
+  const { theme } = useTheme();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,6 +45,39 @@ const StorySection = () => {
             <p className="text-theme-text-secondary text-lg leading-relaxed font-normal">
               Elevated high above the vibrant streets of Galaxy Blue Sapphire Plaza, Dreamy Studio isn’t just a place to stay—it’s a carefully curated escape for urban luxury and creator living. Designed with deep, matte tones and warm highlights, it embraces the beauty of shadow and light, creating an atmosphere that feels intimately yours.
             </p>
+          </motion.div>
+
+          {/* Real Plaza Exterior Spotlight Banner */}
+          <motion.div 
+            variants={itemVariants} 
+            className="mt-16 relative aspect-[21/9] w-full rounded-2xl overflow-hidden group border border-glass-border glass-card p-1.5"
+          >
+            <div className="w-full h-full rounded-xl overflow-hidden relative">
+              <img 
+                src={theme === 'dark' ? "/plaza_hero_dusk.webp" : "/plaza_facade.webp"} 
+                alt="Galaxy Blue Sapphire Plaza Exterior" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-theme-bg via-transparent to-transparent opacity-80"></div>
+              
+              {/* Studio Highlight Indicator Overlay */}
+              <div className="absolute top-[35%] left-[62%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group/dot z-20">
+                <span className="relative flex h-4 w-4">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warm-beige opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-4 w-4 bg-warm-beige shadow-[0_0_15px_#d6c2a8]"></span>
+                </span>
+                <div className="mt-2 glass px-3 py-1 rounded-full border border-warm-beige/30 backdrop-blur-md scale-95 opacity-0 group-hover/dot:scale-100 group-hover/dot:opacity-100 transition-all duration-300 pointer-events-none">
+                  <span className="text-[10px] uppercase tracking-widest font-mono text-white font-bold whitespace-nowrap">Dreamy Studio Location</span>
+                </div>
+              </div>
+              
+              {/* Info Overlay */}
+              <div className="absolute bottom-6 left-6 text-left">
+                <span className="text-[9px] uppercase tracking-widest text-warm-beige font-mono">The Landmark</span>
+                <h4 className="font-heading text-lg text-theme-text mt-1">Galaxy Blue Sapphire Plaza</h4>
+                <p className="text-xs text-theme-text-secondary mt-1">A stunning glass façade soaring above Noida Extension</p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Location & Metro Access Luxury Info Grid */}
