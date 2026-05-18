@@ -5,9 +5,12 @@ import { MessageCircle, Calendar } from 'lucide-react';
 const ContactSection = () => {
   return (
     <section id="contact" className="py-32 relative bg-theme-bg overflow-hidden flex justify-center">
-      {/* Background Glow */}
+      {/* Background Glow (Optimized GPU radial-gradient) */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-        <div className="w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] bg-warm-beige/10 rounded-full blur-[100px]"></div>
+        <div 
+          className="w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.08) 0%, transparent 70%)' }}
+        />
       </div>
 
       <motion.div 

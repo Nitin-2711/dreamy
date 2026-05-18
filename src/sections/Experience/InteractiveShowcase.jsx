@@ -75,7 +75,7 @@ const InteractiveShowcase = () => {
           {showcaseImages.map((item, index) => (
             <motion.div
               key={item.id}
-              style={{ y: index % 2 === 0 ? y1 : y2 }}
+              style={{ y: isMobile ? 0 : (index % 2 === 0 ? y1 : y2) }}
               className="relative group cursor-none"
             >
               <div className="overflow-hidden rounded-2xl aspect-[3/4] relative glass">

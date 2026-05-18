@@ -166,10 +166,16 @@ Please confirm availability. Thank you!`;
 
   return (
     <section id="booking" className="py-32 relative bg-theme-bg z-10 transition-colors duration-700">
-      {/* Background Ambience */}
+      {/* Background Ambience (Optimized GPU radial-gradients) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-warm-beige/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-[600px] h-[600px] bg-warm-beige/5 rounded-full blur-[150px]"></div>
+        <div 
+          className="absolute top-[10%] left-[20%] w-[500px] h-[500px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.05) 0%, transparent 70%)' }}
+        />
+        <div 
+          className="absolute bottom-[20%] right-[10%] w-[600px] h-[600px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.04) 0%, transparent 70%)' }}
+        />
       </div>
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">

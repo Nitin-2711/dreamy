@@ -6,10 +6,16 @@ import { ArrowLeft } from 'lucide-react';
 const NotFound = () => {
   return (
     <div className="min-h-screen w-full bg-[#0A0A0A] flex flex-col justify-between p-8 md:p-16 select-none relative overflow-hidden">
-      {/* Background ambient orbs */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-40 overflow-hidden">
-        <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] rounded-full bg-warm-beige/10 blur-[120px]"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] rounded-full bg-warm-beige/5 blur-[150px]"></div>
+      {/* Background ambient glows (Optimized GPU radial-gradients) */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-30 overflow-hidden">
+        <div 
+          className="absolute top-[30%] left-[20%] w-[400px] h-[400px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.08) 0%, transparent 70%)' }}
+        />
+        <div 
+          className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.04) 0%, transparent 70%)' }}
+        />
       </div>
 
       {/* Top Header details */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
+import LazyImage from '../../components/ui/LazyImage';
 
 const StorySection = () => {
   const { theme } = useTheme();
@@ -53,10 +54,11 @@ const StorySection = () => {
             className="mt-16 relative aspect-[21/9] w-full rounded-2xl overflow-hidden group border border-glass-border glass-card p-1.5"
           >
             <div className="w-full h-full rounded-xl overflow-hidden relative">
-              <img 
+              <LazyImage 
                 src={theme === 'dark' ? "/plaza_hero_dusk.webp" : "/plaza_facade.webp"} 
                 alt="Galaxy Blue Sapphire Plaza Exterior" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full"
+                imageClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-theme-bg via-transparent to-transparent opacity-80"></div>
               

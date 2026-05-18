@@ -16,9 +16,9 @@ const LazyImage = ({ src, alt, className = '', imageClassName = '', ...props }) 
         alt={alt}
         loading="lazy"
         onLoad={() => setIsLoaded(true)}
-        initial={{ filter: 'blur(15px)', opacity: 0 }}
-        animate={isLoaded ? { filter: 'blur(0px)', opacity: 1 } : {}}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, scale: 1.02 }}
+        animate={isLoaded ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`w-full h-full object-cover ${imageClassName}`}
       />
     </div>

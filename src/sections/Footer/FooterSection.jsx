@@ -13,9 +13,12 @@ const FooterSection = () => {
 
   return (
     <footer className="relative bg-theme-bg border-t border-glass-border pt-20 pb-12 z-10 transition-colors duration-700">
-      {/* Background Subtle Gradient */}
+      {/* Background Subtle Gradient (Optimized GPU radial-gradient) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-warm-beige/5 rounded-full blur-[100px]"></div>
+        <div 
+          className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(214, 194, 168, 0.05) 0%, transparent 70%)' }}
+        />
       </div>
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
