@@ -12,35 +12,42 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let mouseRafId = null;
     const handleMouseMove = (e) => {
-      const cursorLight = document.getElementById('cursor-light');
-      if (cursorLight) {
-        cursorLight.style.background = `radial-gradient(700px circle at ${e.clientX}px ${e.clientY}px, rgba(214, 194, 168, 0.05), transparent 80%)`;
-      }
+      if (mouseRafId) cancelAnimationFrame(mouseRafId);
+      mouseRafId = requestAnimationFrame(() => {
+        const cursorLight = document.getElementById('cursor-light');
+        if (cursorLight) {
+          cursorLight.style.background = `radial-gradient(700px circle at ${e.clientX}px ${e.clientY}px, rgba(214, 194, 168, 0.04), transparent 80%)`;
+        }
+      });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.95, // Crisp, highly responsive scroll duration
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
-      mouseMultiplier: 1,
+      mouseMultiplier: 0.95,
       smoothTouch: false,
-      touchMultiplier: 2,
+      touchMultiplier: 1.5,
       infinite: false,
     });
 
+    let lenisRafId = null;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      lenisRafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    lenisRafId = requestAnimationFrame(raf);
 
     return () => {
+      if (mouseRafId) cancelAnimationFrame(mouseRafId);
+      if (lenisRafId) cancelAnimationFrame(lenisRafId);
       lenis.destroy();
       window.removeEventListener('mousemove', handleMouseMove);
     };
