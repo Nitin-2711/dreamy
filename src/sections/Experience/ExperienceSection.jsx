@@ -6,17 +6,17 @@ const ExperienceSection = () => {
     {
       title: "Cozy Nights",
       desc: "Dim the lights, cast a warm glow, and unwind in absolute comfort.",
-      img: "/interior.png"
+      img: "/interior.webp"
     },
     {
       title: "City Lights",
       desc: "Watch the energy of Noida West from the serenity of your high-rise retreat.",
-      img: "/city_view.png"
+      img: "/city_view.webp"
     },
     {
       title: "Calm Productivity",
       desc: "A dedicated minimalist workspace designed to spark your best ideas.",
-      img: "/workspace.png"
+      img: "/workspace.webp"
     }
   ];
 
