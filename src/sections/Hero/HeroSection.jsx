@@ -15,7 +15,7 @@ const HeroSection = () => {
         transition={{ duration: 2.5, ease: 'easeOut' }}
       >
         <img
-          src={theme === 'dark' ? "/hero.png" : "/hero_day.png"}
+          src={theme === 'dark' ? "/hero.webp" : "/hero_day.webp"}
           alt="Luxury Studio Interior"
           className="w-full h-full object-cover"
         />
