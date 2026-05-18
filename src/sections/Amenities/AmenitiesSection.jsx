@@ -7,7 +7,7 @@ const AmenitiesSection = () => {
 
   const amenities = [
     { icon: Wifi, label: "High-Speed WiFi", desc: "Seamless and secure fiber connectivity." },
-    { icon: Tv, label: "Smart TV", desc: "4K streaming access for cinema nights." },
+    { icon: Tv, label: "Smart TV", desc: "Premium streaming access for cinema nights." },
     { icon: Monitor, label: "Workspace Desk", desc: "Creator-focused, ergonomic setup." },
     { icon: Wind, label: "Climate Control AC", desc: "Whisper-quiet luxury cooling." },
     { icon: Coffee, label: "Kitchenette", desc: "Modern amenities for quick dining." },
