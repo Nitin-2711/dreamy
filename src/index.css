@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-bg: var(--bg-color);
+  --color-theme-text: var(--text-primary);
+  --color-theme-text-secondary: var(--text-secondary);
+  --color-theme-text-accent: var(--text-accent);
+  --color-warm-beige: #D6C2A8;
+  --color-glass-white: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+
+  --font-heading: 'Clash Display', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: #FAF6F0; /* Warm Alabaster/Cream - ultra-expensive luxury hotel vibe */
+    --text-primary: #1A1510; /* Rich Dark Sepia/Charcoal */
+    --text-secondary: #5C544A; /* Warm Muted Charcoal */
+    --text-accent: #B89C7E; /* Soft Champagne Gold */
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(184, 156, 126, 0.15); /* Gold-tinted border */
+    --text-glow-shadow: 0 1px 2px rgba(184, 156, 126, 0.1);
+  }
+  
+  .dark {
+    --bg-color: #0A0A0A; /* Deep Obsidian Black */
+    --text-primary: #FAF6F0; /* Soft Warm Cream */
+    --text-secondary: #D6C2A8; /* Warm Beige / Champagne */
+    --text-accent: #E8D4BA; /* Sparkling Gold */
+    --glass-bg: rgba(10, 10, 10, 0.55);
+    --glass-border: rgba(214, 194, 168, 0.12);
+    --text-glow-shadow: 0 0 25px rgba(214, 194, 168, 0.25);
+  }
+
+  body {
+    @apply bg-theme-bg text-theme-text font-body antialiased transition-colors duration-700;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-glass-white border border-glass-border backdrop-blur-md transition-colors duration-700;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  .glass-card {
+    @apply bg-glass-white border border-glass-border backdrop-blur-lg rounded-2xl transition-colors duration-700;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  .text-glow {
+    text-shadow: var(--text-glow-shadow);
+  }
+  .text-glow-intense {
+    text-shadow: var(--text-glow-shadow), 0 0 35px rgba(214, 194, 168, 0.4);
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--text-accent);
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+  }
+}
