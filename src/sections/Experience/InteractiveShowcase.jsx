@@ -17,19 +17,19 @@ const InteractiveShowcase = () => {
   const showcaseImages = [
     {
       id: 1,
-      src: theme === 'dark' ? "/lounge.png" : "/lounge_day.png",
+      src: theme === 'dark' ? "/lounge.webp" : "/lounge_day.webp",
       title: "The Lounge",
       desc: "Curated furniture with ambient lighting."
     },
     {
       id: 2,
-      src: theme === 'dark' ? "/suite.png" : "/suite_day.png",
+      src: theme === 'dark' ? "/suite.webp" : "/suite_day.webp",
       title: "The Suite",
       desc: "A plush, cloud-like bed for perfect rest."
     },
     {
       id: 3,
-      src: "/workspace.png", // reusing workspace for both themes
+      src: "/workspace.webp", // reusing workspace for both themes
       title: "The Workspace",
       desc: "Designed for deep focus and creativity."
     }

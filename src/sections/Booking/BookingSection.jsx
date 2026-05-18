@@ -253,7 +253,7 @@ Please confirm availability. Thank you!`;
               className="relative rounded-2xl overflow-hidden aspect-video group"
             >
               <LazyImage 
-                src={checkInDate ? (theme === 'dark' ? "/suite.png" : "/suite_day.png") : (theme === 'dark' ? "/hero.png" : "/hero_day.png")} 
+                src={checkInDate ? (theme === 'dark' ? "/suite.webp" : "/suite_day.webp") : (theme === 'dark' ? "/hero.webp" : "/hero_day.webp")} 
                 alt="Selected ambiance" 
                 className="w-full h-full"
                 imageClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 

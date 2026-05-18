@@ -77,9 +77,10 @@ const FooterSection = () => {
           <div>
             <h4 className="text-xs uppercase tracking-[0.2em] text-warm-beige font-mono mb-6 font-semibold">Location</h4>
             <address className="not-italic text-sm text-theme-text-secondary leading-relaxed font-normal space-y-2">
+              <p className="font-medium text-theme-text">Dreamy Studio</p>
               <p>Galaxy Blue Sapphire Plaza</p>
               <p>Greater Noida West</p>
-              <p>Uttar Pradesh, India</p>
+              <p className="text-xs text-warm-beige/70 font-mono pt-1">Nearest Metro: Noida Sector 52</p>
             </address>
           </div>
         </div>

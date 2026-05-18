@@ -44,6 +44,29 @@ const StorySection = () => {
               Elevated high above the vibrant streets of Galaxy Blue Sapphire Plaza, Dreamy Studio isn’t just a place to stay—it’s a carefully curated escape for urban luxury and creator living. Designed with deep, matte tones and warm highlights, it embraces the beauty of shadow and light, creating an atmosphere that feels intimately yours.
             </p>
           </motion.div>
+
+          {/* Location & Metro Access Luxury Info Grid */}
+          <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {/* Address Card */}
+            <div className="glass-card p-6 border-warm-beige/10 rounded-2xl flex flex-col items-center justify-center text-center relative group overflow-hidden transition-all duration-300 hover:border-warm-beige/30">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-warm-beige/20 to-transparent"></div>
+              <span className="text-[10px] tracking-[0.2em] uppercase font-mono text-warm-beige mb-2">Location Address</span>
+              <h3 className="text-base text-theme-text font-medium mb-1">Dreamy Studio</h3>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">
+                Galaxy Blue Sapphire Plaza,<br />Greater Noida West, UP
+              </p>
+            </div>
+            
+            {/* Metro Card */}
+            <div className="glass-card p-6 border-warm-beige/10 rounded-2xl flex flex-col items-center justify-center text-center relative group overflow-hidden transition-all duration-300 hover:border-warm-beige/30">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-warm-beige/20 to-transparent"></div>
+              <span className="text-[10px] tracking-[0.2em] uppercase font-mono text-warm-beige mb-2">Metro Access</span>
+              <h3 className="text-base text-theme-text font-medium mb-1">Noida Sector 52</h3>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">
+                Nearest Metro Station<br />(Seamless high-speed city transit)
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

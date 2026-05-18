@@ -121,7 +121,7 @@ const AmenitiesSection = () => {
           {/* Visual Showcase - Column 7 */}
           <div className="lg:col-span-7 aspect-video lg:aspect-auto relative overflow-hidden min-h-[350px]">
             <LazyImage 
-              src={theme === 'dark' ? "/city_view.png" : "/hero_day.png"} 
+              src={theme === 'dark' ? "/city_view.webp" : "/hero_day.webp"} 
               alt="Cinematic Balcony view" 
               className="w-full h-full"
               imageClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
